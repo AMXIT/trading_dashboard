@@ -56,26 +56,12 @@ def fetch_order_book():
     return obj.orderBook()
 
 
-import csv
-import gdown  # To properly download from Google Drive
-
+# Load the dataset
 def load_data():
-    file_id = "1-KRWKS0WYzyWPnX2uB1eQZ1-SbkdbYqB"
-    file_url = f"https://drive.google.com/uc?id={file_id}"
-
-    # Download the file
-    output = "data.csv"
-    gdown.download(file_url, output, quiet=False)
-
-    # Read the CSV
-    df = pd.read_csv(output, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL, on_bad_lines="warn")
-
-    # Convert date columns safely
-    if "Entry-Date" in df.columns:
-        df["Entry-Date"] = pd.to_datetime(df["Entry-Date"], errors='coerce')
-    if "ExitDate" in df.columns:
-        df["ExitDate"] = pd.to_datetime(df["ExitDate"], errors='coerce')
-
+    file_path = r"67a4ae1b2090f585bfcd4fe9_1738845725.csv"
+    df = pd.read_csv(file_path)
+    df["Entry-Date"] = pd.to_datetime(df["Entry-Date"], errors='coerce')
+    df["ExitDate"] = pd.to_datetime(df["ExitDate"], errors='coerce')
     return df
 
 
