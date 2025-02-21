@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "locale": "English_India.1252",
+  "metadata": {
+    "appmode": "python-streamlit",
+    "entrypoint": "app"
+  },
+  "python": {
+    "version": "3.9.13",
+    "package_manager": {
+      "name": "pip",
+      "version": "22.0.4",
+      "package_file": "requirements.txt"
+    }
+  },
+  "files": {
+    "requirements.txt": {
+      "checksum": "ff1d15320c19a2a4e374df410cfe8ca1"
+    },
+    ".env": {
+      "checksum": "623d3f4f1449826835a14aa8ad4076f4"
+    },
+    "app.py": {
+      "checksum": "660ce831f25ca533c61c53f272e2eb59"
+    },
+    "serve.py": {
+      "checksum": "cc539afdfdaa719421d0f06219ce1e12"
+    }
+  }
+}
