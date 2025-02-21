@@ -60,7 +60,7 @@ def fetch_order_book():
 
 # Load the dataset
 def load_data():
-    file_path = r"C:\Users\amrit\Downloads\67a4ae1b2090f585bfcd4fe9_1738845725.csv"
+    file_path = r"https://drive.google.com/uc?export=download&id=1-KRWKS0WYzyWPnX2uB1eQZ1-SbkdbYqB"
     df = pd.read_csv(file_path)
     df["Entry-Date"] = pd.to_datetime(df["Entry-Date"], errors='coerce')
     df["ExitDate"] = pd.to_datetime(df["ExitDate"], errors='coerce')
